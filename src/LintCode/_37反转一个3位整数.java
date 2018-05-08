@@ -3,6 +3,7 @@ package LintCode;
 import java.util.Scanner;
 
 /**
+ * https://www.lintcode.com/zh-cn/problem/reverse-3-digit-integer/
  * 37. 反转一个3位整数
  * 描述
  * 反转一个只有3位数的整数。

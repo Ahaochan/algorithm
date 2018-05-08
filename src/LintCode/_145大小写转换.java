@@ -3,6 +3,7 @@ package LintCode;
 import java.util.Scanner;
 
 /**
+ * https://www.lintcode.com/zh-cn/problem/lowercase-to-uppercase/
  * 145. 大小写转换
  * 描述
  * 将一个字符由小写字母转换为大写字母
