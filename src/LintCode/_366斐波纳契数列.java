@@ -3,7 +3,7 @@ package LintCode;
 import java.util.Scanner;
 
 /**
- * https://www.lintcode.com/problem/fibonacci/description
+ * https://www.lintcode.com/problem/fibonacci
  * 366. 斐波纳契数列
  * 描述
  * 查找斐波纳契数列中第 N 个数。
