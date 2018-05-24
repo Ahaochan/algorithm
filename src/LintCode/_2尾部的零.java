@@ -13,6 +13,7 @@ package LintCode;
 public class _2尾部的零 {
     public long trailingZeros(long n) {
         int count = 0;
+        // 因式分解, 找出有多少个5因子
         while (n != 0) {
             count += n / 5;
             n /= 5;
