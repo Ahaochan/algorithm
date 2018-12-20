@@ -1,7 +1,7 @@
 package 剑指offer.位运算;
 
 /**
- * https://www.nowcoder.com/practice/8c82a5b80378478f9484d87d1c5f12a4
+ * https://www.nowcoder.com/practice/8ee967e43c2c4ec193b040ea7fbb10b8
  * 题目描述
  * 输入一个整数，输出该数二进制表示中1的个数。其中负数用补码表示。
  *
