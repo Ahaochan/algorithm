@@ -41,7 +41,13 @@ public class 顺时针打印矩阵 {
         ArrayList<Integer> result = new ArrayList<>();
 
         // 标记走过的路径的 boolean[][]
-        boolean[][] marked = new boolean[matrix.length][matrix.length];
+        boolean[][] marked = new boolean[matrix.length][];
+        int total = 0; // 总数
+        for(int i = 0, len = matrix.length; i < len; i++) {
+            total += matrix[i].length;
+            marked[i] = new boolean[matrix[i].length];
+        }
+
         // 当前所在位置
         int row = 0, col = 0;
         // 方向对应的坐标增量, 右下左上
@@ -51,7 +57,7 @@ public class 顺时针打印矩阵 {
 
         // 1. 根据数量判断循环是否结束
         int num = 0;
-        while (num < matrix.length * matrix.length) {
+        while (num < total) {
 
             // 2. 如果没走过, 就标记并输出, 这里的if是为了解决转向时仍停留在原地的问题
             if (!marked[row][col]) {
@@ -62,7 +68,7 @@ public class 顺时针打印矩阵 {
 
             // 3. 判断下一个坐标是否走过
             int nextRow = row + dir[curDir][0], nextCol = col + dir[curDir][1];
-            if (nextRow >= 0 && nextRow < matrix.length && nextCol >= 0 && nextCol < matrix.length && !marked[nextRow][nextCol]) {
+            if (nextRow >= 0 && nextRow < marked.length && nextCol >= 0 && nextCol < marked[nextRow].length && !marked[nextRow][nextCol]) {
                 row = nextRow;
                 col = nextCol;
             }
