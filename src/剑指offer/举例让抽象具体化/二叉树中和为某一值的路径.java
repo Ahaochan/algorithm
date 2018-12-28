@@ -3,7 +3,7 @@ package 剑指offer.举例让抽象具体化;
 import java.util.ArrayList;
 
 /**
- * https://www.nowcoder.com/practice/a861533d45854474ac791d90e447bafd
+ * https://www.nowcoder.com/practice/b736e784e3e34731af99065031301bca
  * 题目描述
  * 输入一颗二叉树的跟节点和一个整数，打印出二叉树中结点值的和为输入整数的所有路径。
  * 路径定义为从树的根结点开始往下一直到叶结点所经过的结点形成一条路径。
