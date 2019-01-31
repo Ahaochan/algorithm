@@ -51,18 +51,4 @@ public class _0028_实现strStr {
         }
         return -1;
     }
-
-    public static class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode(int x) {
-            val = x;
-        }
-
-        @Override
-        public String toString() {
-            return val + "->" + (next != null ? next.toString() : null);
-        }
-    }
 }

@@ -44,18 +44,4 @@ public class _0027_移除元素 {
         }
         return newLen;
     }
-
-    public static class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode(int x) {
-            val = x;
-        }
-
-        @Override
-        public String toString() {
-            return val + "->" + (next != null ? next.toString() : null);
-        }
-    }
 }

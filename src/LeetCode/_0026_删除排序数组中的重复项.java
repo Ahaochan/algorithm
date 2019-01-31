@@ -43,18 +43,4 @@ public class _0026_删除排序数组中的重复项 {
         }
         return newLen;
     }
-
-    public static class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode(int x) {
-            val = x;
-        }
-
-        @Override
-        public String toString() {
-            return val + "->" + (next != null ? next.toString() : null);
-        }
-    }
 }
