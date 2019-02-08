@@ -85,32 +85,4 @@ public class _0101_对称二叉树 {
 //        return node1 == null && node2 == null
 //                  || node1 != null && node2 != null && node1.val == node2.val && isMirror(node1.left, node2.right) && isMirror(node1.right, node2.left);
     }
-
-    public double Power(double base, int exponent) {
-        int ex = exponent;
-        // 1. 负数的预处理
-        if(exponent < 0) {
-            ex = -ex;
-        }
-
-        // 2. 快速幂的缓存, 只计算到 exponent/2 的快速幂, 后面的用不到
-        double[] pow = new double[ex + 1]; // +1 避免 exponent=0 创建空数组
-        for (int i = 0, len = ex >> 1; i <= len; i++) {
-
-            switch (i) {
-                case 0: pow[i] = 1;    break;                         // a^0 = 1
-                case 1: pow[i] = base; break;                         // a^1 = a
-                default: int half = i>>1;
-                    pow[i] = pow[half] * pow[half] * pow[i%2];          // a^n = a^(n/2) * a^(n/2) * a
-            }
-        }
-
-        int half = ex>>1;
-        double result = pow[half] * pow[half] * pow[ex%2];
-        // 3. 如果是负数, 则返回倒数
-        if(exponent < 0) {
-            result = 1.0 / result;
-        }
-        return result;
-    }
 }
