@@ -2,7 +2,7 @@
 
 | 题库 | 刷题进度 |
 |:----:|:-------:|
-| [LeetCode](https://github.com/Ahaochan/algorithm/tree/master/src/test/java/LeetCode) | 35/824 |
+| [LeetCode](https://github.com/Ahaochan/algorithm/tree/master/src/test/java/LeetCode) | 56/824 |
 | [LintCode](https://github.com/Ahaochan/algorithm/tree/master/src/test/java/LintCode) | 解题中 |
 | [剑指offer](https://github.com/Ahaochan/algorithm/tree/master/src/test/java/剑指offer) | 解题中 |
 | [啊哈算法](https://github.com/Ahaochan/algorithm/tree/master/src/test/java/啊哈算法) | 不再更新 |
