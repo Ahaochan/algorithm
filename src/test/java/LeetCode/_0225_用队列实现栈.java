@@ -41,7 +41,7 @@ public class _0225_用队列实现栈 {
         Assert.assertEquals(4, stack.pop());
     }
 
-    private static class MyStack {
+    private class MyStack {
         Queue<Integer> queue1;
         Queue<Integer> queue2;
 
