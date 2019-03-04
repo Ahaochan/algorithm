@@ -2,7 +2,6 @@ package LeetCode;
 
 import org.junit.Assert;
 import org.junit.Test;
-import 工具.ListNode;
 
 /**
  * https://leetcode-cn.com/problems/valid-anagram/
