@@ -3,8 +3,6 @@ package LeetCode;
 import org.junit.Assert;
 import org.junit.Test;
 
-import java.math.BigDecimal;
-
 /**
  * https://leetcode-cn.com/problems/power-of-three/comments/
  * 题目描述:
@@ -24,7 +22,6 @@ public class _0326_3的幂 {
         Assert.assertFalse(isPowerOfThree(0));
         Assert.assertTrue(isPowerOfThree(9));
         Assert.assertFalse(isPowerOfThree(45));
-        System.out.println(BigDecimal.valueOf(Math.pow(3,19)));
     }
 
 
