@@ -77,7 +77,7 @@ public class _0069_x的平方根 {
 
         // f(n)  = n^2 – x
         // f'(n) = 2*n
-        double point = x / 2;
+        double point = x >> 1;
         while (Math.abs(point - x * 1.0 / point) > 1e-5) {
             // 0 - f(a)                  = (b - a)     * f'(a)
             //   - f(point)              = (b - point) * f'(point)
