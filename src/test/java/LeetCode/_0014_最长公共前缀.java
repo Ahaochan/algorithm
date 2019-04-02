@@ -21,7 +21,7 @@ public class _0014_最长公共前缀 {
         Assert.assertEquals("", longestCommonPrefix("", ""));
         Assert.assertEquals("c", longestCommonPrefix("c", "c"));
         Assert.assertEquals("", longestCommonPrefix("abab", "aba", ""));
-        Assert.assertEquals("a", longestCommonPrefix("aca", "cba"));
+        Assert.assertEquals("", longestCommonPrefix("aca", "cba"));
     }
 
     public String longestCommonPrefix(String... strs) {
