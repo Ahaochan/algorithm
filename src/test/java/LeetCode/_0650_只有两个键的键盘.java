@@ -4,7 +4,7 @@ import org.junit.Assert;
 import org.junit.Test;
 
 /**
- * https://leetcode-cn.com/problems/add-two-numbers/
+ * https://leetcode-cn.com/problems/2-keys-keyboard/
  * 题目描述:
  * 最初在一个记事本上只有一个字符 'A'。你每次可以对这个记事本进行两种操作：
  *      Copy All (复制全部) : 你可以复制这个记事本中的所有字符(部分的复制是不允许的)。
