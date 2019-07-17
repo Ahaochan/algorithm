@@ -8,7 +8,7 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * https://leetcode-cn.com/problems/two-sum/
+ * https://leetcode-cn.com/problems/self-dividing-numbers/
  * 题目描述:
  * 自除数 是指可以被它包含的每一位数除尽的数。
  * 例如，128 是一个自除数，因为 128 % 1 == 0，128 % 2 == 0，128 % 8 == 0。

@@ -4,7 +4,7 @@ import org.junit.Assert;
 import org.junit.Test;
 
 /**
- * https://leetcode-cn.com/problems/two-sum/
+ * https://leetcode-cn.com/problems/rotate-string/
  * 题目描述:
  * 给定两个字符串, A 和 B。
  * A 的旋转操作就是将 A 最左边的字符移动到最右边。

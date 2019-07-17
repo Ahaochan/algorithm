@@ -6,7 +6,7 @@ import org.junit.Test;
 import java.util.*;
 
 /**
- * https://leetcode-cn.com/problems/two-sum/
+ * https://leetcode-cn.com/problems/rotting-oranges/
  * 题目描述:
  * 在给定的网格中，每个单元格可以有以下三个值之一：
  * 值 0 代表空单元格；

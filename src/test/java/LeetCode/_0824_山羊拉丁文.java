@@ -4,7 +4,7 @@ import org.junit.Assert;
 import org.junit.Test;
 
 /**
- * https://leetcode-cn.com/problems/two-sum/
+ * https://leetcode-cn.com/problems/goat-latin/
  * 题目描述:
  * 给定一个由空格分割单词的句子 S。每个单词只包含大写或小写字母。
  * 我们要将句子转换为 “Goat Latin”（一种类似于 猪拉丁文 - Pig Latin 的虚构语言）。
