@@ -16,7 +16,7 @@ public class _0633_平方数之和 {
     public void test1() {
         Assert.assertTrue(judgeSquareSum(5));
         Assert.assertFalse(judgeSquareSum(3));
-        Assert.assertFalse(judgeSquareSum(0));
+        Assert.assertTrue(judgeSquareSum(0));
     }
 
     /**
