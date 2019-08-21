@@ -20,6 +20,11 @@ public class _0287_寻找重复数 {
         Assert.assertEquals(9, findDuplicate(2, 5, 9, 6, 9, 3, 8, 9, 7, 1));
     }
 
+    /**
+     * https://leetcode-cn.com/submissions/detail/26754301/
+     * 执行用时 :1 ms, 在所有 Java 提交中击败了99.88%的用户
+     * 内存消耗 :39.6 MB, 在所有 Java 提交中击败了29.64%的用户
+     */
     public int findDuplicate(int... nums) {
         // 1. 找到快慢指针相遇的点
         int fast = 0, slow = 0;
