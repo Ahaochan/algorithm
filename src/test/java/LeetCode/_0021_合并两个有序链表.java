@@ -36,26 +36,26 @@ public class _0021_合并两个有序链表 {
     }
 
 
-    public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
+    public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
         // 1. 一个新链表
-        ListNode head = new ListNode(-1), node = head;
+        ListNode dummy = new ListNode(-1), node = dummy;
 
         // 2. 归并排序
-        while(l1 != null && l2 != null){
-            if(l1.val < l2.val) {
-                node.next = l1;
+        while(list1 != null && list2 != null){
+            if(list1.val < list2.val) {
+                node.next = list1;
                 node = node.next;
-                l1 = l1.next;
+                list1 = list1.next;
             } else {
-                node.next = l2;
+                node.next = list2;
                 node = node.next;
-                l2 = l2.next;
+                list2 = list2.next;
             }
         }
 
         // 3. 剩下的接到新链表后面
-        if(l1 == null) node.next = l2;
-        else node.next = l1;
-        return head.next;
+        if(list1 == null) node.next = list2;
+        else node.next = list1;
+        return dummy.next;
     }
 }
