@@ -4,14 +4,8 @@ import org.junit.Assert;
 import org.junit.Test;
 
 /**
- * https://leetcode-cn.com/problems/search-insert-position/
- * 题目描述:
- * 给定一个排序数组和一个目标值，在数组中找到目标值，并返回其索引。如果目标值不存在于数组中，返回它将会被按顺序插入的位置。
- * 你可以假设数组中无重复元素。
- *
- * 解题思路
- * 二分查找
- *
+ * 题目: https://leetcode-cn.com/problems/search-insert-position/
+ * 题解: https://labuladong.github.io/algo/1/11/
  */
 public class _0035_搜索插入位置 {
     @Test
@@ -20,20 +14,42 @@ public class _0035_搜索插入位置 {
         Assert.assertEquals(1, searchInsert(new int[]{1,3,5,6}, 2));
         Assert.assertEquals(4, searchInsert(new int[]{1,3,5,6}, 7));
         Assert.assertEquals(0, searchInsert(new int[]{1,3,5,6}, 0));
+        Assert.assertEquals(0, searchInsert(new int[]{5}, 5));
     }
 
     public int searchInsert(int[] nums, int target) {
-        int start = 0, end = nums.length;
-        while(start < end) {
-            int mid = (start + end) / 2;
-            if(target == nums[mid]) {
+        return this.searchInsertV4(nums, target);
+    }
+
+    public int searchInsertV2(int[] nums, int target) {
+        int l = 0, r = nums.length - 1; // 从[l, r]中查找
+        while (l <= r) { // l == r + 1 跳出, 不必要算l < r, 否则return那里还要再计算一轮if else
+            int mid = l + (r - l) / 2;
+            if(nums[mid] == target) {
                 return mid;
-            } else if(target < nums[mid]) {
-                end = mid;
-            } else {
-                start = mid + 1;
+            // [mid + 1, r]或者[l, mid - 1]
+            } else if (nums[mid] < target) {
+                l = mid + 1;
+            } else if(nums[mid] > target) {
+                r = mid - 1;
             }
         }
-        return start;
+        return l;
+    }
+
+    public int searchInsertV4(int[] nums, int target) {
+        int l = 0, r = nums.length; // 从[l, r)中查找
+        while (l < r) { // l == r 跳出
+            int mid = l + (r - l) / 2;
+            if(nums[mid] == target) {
+                return mid;
+                // [mid + 1, r)或者[l, mid)
+            } else if (nums[mid] < target) {
+                l = mid + 1;
+            } else if(nums[mid] > target) {
+                r = mid;
+            }
+        }
+        return l;
     }
 }
