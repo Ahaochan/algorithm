@@ -4,14 +4,8 @@ import org.junit.Assert;
 import org.junit.Test;
 
 /**
- * https://leetcode-cn.com/problems/first-bad-version/
- * 题目描述:
- * 你是产品经理，目前正在带领一个团队开发新的产品。不幸的是，你的产品的最新版本没有通过质量检测。由于每个版本都是基于之前的版本开发的，所以错误的版本之后的所有版本都是错的。
- * 假设你有 n 个版本 [1, 2, ..., n]，你想找出导致之后所有版本出错的第一个错误的版本。
- * 你可以通过调用 bool isBadVersion(version) 接口来判断版本号 version 是否在单元测试中出错。实现一个函数来查找第一个错误的版本。你应该尽量减少对调用 API 的次数。
- *
- * 解题思路
- * 二分查找
+ * 题目: https://leetcode-cn.com/problems/first-bad-version/
+ * 题解: https://labuladong.github.io/algo/1/11/
  */
 public class _0278_第一个错误的版本 {
 
@@ -21,21 +15,24 @@ public class _0278_第一个错误的版本 {
     }
 
     public int firstBadVersion(int n) {
-        int start = 0, end = n;
-
-        int mid = start + (end - start) / 2;
-        while (start < end) {
-
-            if (isBadVersion(mid)) {
-                end = mid;
-            } else {
-                start = mid + 1;
-            }
-            mid = start + (end - start) / 2;
-        }
-
-        return mid;
+        return this.firstBadVersionV2(n);
     }
+
+    public int firstBadVersionV2(int n) {
+        int l = 0, r = n; // [l, r)中查找
+        while (l < r) { // l == r 跳出, 也就是[r, r)区间. 如果写l <= r是没有意义的, [r+1, r)没意义
+            int mid = l + (r - l) / 2;
+            if(isBadVersion(mid)) {
+                // mid是坏版本, 就从[l, mid)查找
+                r = mid;
+            } else {
+                // mid不是坏版本, 就继续从[mid+1, r)中查找
+                l = mid + 1;
+            }
+        }
+        return r;
+    }
+
 
     protected boolean isBadVersion(int version) {
         return version >= 4;
